@@ -1,0 +1,208 @@
+<html>
+
+<head>
+	<link type="text/css" rel="stylesheet" href="/style-guide/css/fluig-style-guide.min.css" />
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/jquery/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="/portal/resources/js/mustache/mustache-min.js"></script>
+	<script type="text/javascript" src="/style-guide/js/fluig-style-guide.min.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<div class="fluig-style-guide">
+		<form name="form" role="form">
+
+
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"> <i class="fluigicon fluigicon-user icon-md"></i>Requisitante</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="nome">nome</label>
+							<input type="text" class="form-control" name="nome" id="nome" placeholder="Enter nome">
+						</div>
+						<div class="form-group col-md-4">
+							<label for="telefone">telefone</label>
+							<input type="text" class="form-control" name="telefone" id="telefone" placeholder="Enter telefone">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="email">Email address</label>
+							<input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="form-group col-md-2">
+							<label for="documentoIdentidade">documentoIdentidade</label>
+							<input type="text" class="form-control" name="documentoIdentidade" id="documentoIdentidade"
+								placeholder="Enter nome">
+						</div>
+						<div class="form-group col-md-2">
+							<label for="dataNascimento">dataNascimento</label>
+							<input type="text" class="form-control" name="dataNascimento" id="dataNascimento"
+								placeholder="Enter dataNascimento">
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">responsaveis</h3>
+				</div>
+				<div class="panel-body">
+					<table tablename="responsaveisTabela" class="table table-hover" addbuttonclass="btn btn-success">
+						<thead>
+							<tr>
+								<th>Resposaveis</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input class="form-control" type="zoom" id="resonsavels" name="resonsavels" data-zoom="{                                
+																				                                'displayKey':'colleagueName',
+																				                                'datasetId':'colleague',
+																				                                'fields':[
+																				                                    {
+																				                                    'field':'colleagueName',
+																				                                    'label':'Nome'
+																				                                }
+																				                                ]}" />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">ponto comercial</h3>
+				</div>
+				<div class="panel-body">
+
+
+					<div class="row">
+						<div class="form-group col-md-6">
+							<label for="nome">responsavel</label>
+							<input class="form-control" type="zoom" id="resonsavel" name="resonsavel" data-zoom="{                                
+										                                'displayKey':'colleagueName',
+										                                'datasetId':'colleague',
+										                                'fields':[
+										                                    {
+										                                    'field':'colleagueName',
+										                                    'label':'Nome'
+										                                }
+										                                ]}" />
+						</div>
+						<div class="form-group col-md-2">
+							<label for="tipoDePonto">tipoDePonto</label>
+							<div class="radio">
+								<label><input type="radio" id="tipoDePonto" name="tipoDePonto" value="quiosque">Quiosque</label>
+								<label><input type="radio" id="tipoDePonto" name="tipoDePonto" value="loja">loja</label>
+							</div>
+						</div>
+
+						<div class="form-group col-md">
+							<div class="checkbox">
+								<label>
+									<input type="checkbox" name="segunda" value="segunda">
+									Segunda
+								</label>
+								<label>
+									<input type="checkbox" name="terca" value="terca">
+									terca
+								</label>
+								<label>
+									<label>
+										<input type="checkbox" name="quarta" value="quarta">
+										quarta
+									</label>
+									<label>
+										<input type="checkbox" name="quinta" value="quinta">
+										quinta
+									</label>
+									<label>
+										<input type="checkbox" name=sexta value="sexta">
+										sexta
+									</label>
+									<label>
+										<input type="checkbox" name='sabado' value="sabado">
+										sábado
+									</label>
+									<label>
+										<input type="checkbox" name="domingo" value="domingo">
+										domingo
+									</label>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="row">
+						<div class='form-group col-md-2'>
+							<label for="cep">CEP</label>
+							<input type="text" name="cep" id="cep" mask="00000-000" placeholder="CEP" class="form-control">
+						</div>
+						<div class='form-group col-md-3'>
+							<label for="logradouro">logradouro</label>
+							<input type="text" name="logradouro" id="logradouro" placeholder="logradouro" class="form-control">
+						</div>
+						<div class='form-group col-md-1'>
+							<label for="numero">numero</label>
+							<input type="text" name="numero" id="numero" placeholder="numero" class="form-control">
+						</div>
+						<div class='form-group col-md-2'>
+							<label for="bairro">bairro</label>
+							<input type="text" name="bairro" id="bairro" placeholder="bairro" class="form-control">
+						</div>
+						<div class='form-group col-md-3'>
+							<label for="cidade">cidade</label>
+							<input type="text" name="cidade" id="cidade" placeholder="cidade" class="form-control">
+						</div>
+
+						<div class='form-group col-md-1'>
+							<label for="estado">estado</label>
+							<input type="text" name="estado" id="estado" placeholder="estado" class="form-control">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title"> <i class="fluigicon fluigicon-money icon-md"></i>Requisitante</h3>
+				</div>
+				<div class="panel-body">
+					<div class="row">
+						<div class='form-group col-md-12'>
+							<label for="valor">valor</label>
+							<input type="number" name="valor" id="valor" class="form-control">
+						</div>
+					</div>
+					<div class="row">
+						<div class="form-group col-md-12">
+							<label>Informações adicionais</label>
+							<textarea name="informacao" id="informacao" class="form-control" rows="5"></textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="cep.js"></script>
+<script>
+	var calendarioNascimento = FLUIGC.calendar('#dataNascimento');
+
+</script>
+
+</html>
